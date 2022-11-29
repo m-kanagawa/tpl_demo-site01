@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+/* 管理画面 css
+----------------------------------------------------
+   管理者を含めた共通スタイル
+*/
+
+
+// エディター内のCSS
+.editor-styles-wrapper {
+	@import "setting";            //設定用
+	@import "parts/plugin";       //プラグイン
+	@import "parts/mixin";        // ミックスイン、@extend、CSS3、凡用など
+	@import "parts/heading";      // 見出し
+	@import "parts/buttons";      // ボタン
+	@import "parts/general";      // 汎用
+	.wp-block {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.wp-block-acf-acf-parts {
+		padding: 15px;
+		background-color: #fff9f8;
+		@media (min-width: $md) {
+			padding: 30px;
+		}
+	}
+}
+
+
+
+/* ログイン画面のロゴを変更
+* ---------------------------------------- */
+body.login {
+	background: radial-gradient(
+    circle farthest-side at 200px 200px,
+    #4a4f84 0%,
+    #1a1e49 50%,
+    #000429 100%
+  );
+	background-size: cover;
+	h1 {
+		a {
+			display: inline-block;
+			height: auto;
+			margin:0 auto !important;
+			width:auto !important;
+			background:none!important;
+			text-indent:0!important;
+			color: #fff;
+			letter-spacing: 0.1em;
+			transition: all,.3s;
+			font-size: 2rem;
+			// text-shadow: 1px 1px 1px #444
+			&:hover {
+				color: rgba(#fff,.7);
+			}
+		}
+	}
+}
+body.login div#login {}
+body.login div#login h1 {margin-bottom: 20px;}
+body.login div#login h1::after {
+	// content: "管理画面" !important;
+	// font-weight: normal;
+	// letter-spacing: 0.1em;
+	// color: #fff;
+	// text-shadow: 1px 1px 1px #444
+}
+body.login div#login h1 a {
+	// display: none;
+}
+
+body.login #login_error,
+body.login .message,
+body.login .success {
+	background-color: rgba(255, 255, 255, .1);
+	color: #fff;
+}
+
+
+body.login div#login form#loginform {
+	background-color: rgba(0, 0, 0, .5);
+}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform label {color: #fff;}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input[type="text"]::-webkit-input-placeholder,
+body.login div#login form#loginform input[type="password"]::-webkit-input-placeholder {color: #ccc !important;}
+body.login div#login form#loginform input[type="text"]:-ms-input-placeholder,
+body.login div#login form#loginform input[type="password"]:-ms-input-placeholder {color: #ccc !important;}
+body.login div#login form#loginform input[type="text"]::-moz-placeholder,
+body.login div#login form#loginform input[type="password"]::-moz-placeholder {color: #ccc !important;}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.forgetmenot label {
+	color:  #fff;
+	text-shadow: 1px 1px 1px #444;
+}
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit {}
+body.login div#login p#nav {}
+body.login div#login p#nav a {
+	color:  #fff;
+	text-shadow: 1px 1px 1px #444;
+}
+body.login div#login p#backtoblog {}
+body.login div#login p#backtoblog a {
+	color:  #fff;
+	text-shadow: 1px 1px 1px #444;
+}
+.login #login_error {
+	margin-top: 18px;
+	border-left-color: #ff6f6f;
+}
+
+
+/* エディター */
+html :where(.wp-block) {
+	max-width: 1200px;
+}
+
+/* ACF
+* ---------------------------------------- */
+div[data-layout="menu_table_start_set"] .acf-fc-layout-handle,
+div[data-layout="menu_table_end_set"] .acf-fc-layout-handle {
+	background-color: #0263a5;
+	color: #fff !important;
+}
+div[data-layout="surround_start_set"] .acf-fc-layout-handle,
+div[data-layout="surround_end_set"] .acf-fc-layout-handle {
+	background-color: #001f34;
+	color: #fff !important;
+}
+
+div[data-name="acf_container_col"] .acf-row:nth-child(odd) .acf-row-handle {
+	background-color: #01609f !important;
+	color: #fff !important;
+}
+div[data-name="acf_container_col"] .acf-row:nth-child(even) .acf-row-handle {
+	background-color: #0374c0 !important;
+	color: #fff !important;
+}
+
+.mce-edit-area iframe {
+	/* height: 200px !important; */
+}
+
+/* 管理画面カラー変更
+* ---------------------------------------- */
+/* Admin Bar */
+/*管理画面のヘッダーの色*/
+#wpadminbar {
+  color: #fff;
+  background: #001f34;
+}
+/* Admin Menu */
+/*メニューの背景色*/
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+	background: #001f34;
+}
+/*メニューのホバーした時の背景色*/
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+  color: #fff;
+  background: #023e66;
+}
+/* Admin Menu: submenu */
+/*メニューの第2階層の背景色*/
+#adminmenu .wp-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu a.wp-has-current-submenu:focus + .wp-submenu {
+  background: #001f34;
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+  border-right-color: #001f34;
+}
+
+/* Core UI */
+/*更新、公開ボタンの色*/
+.wp-core-ui .button-primary {
+	background: #001f34;
+	border-color: #001f34;
+  color: #fff;
+}
+.wp-core-ui .button-primary:hover {
+	background: #023e66;
+  color: #fff;
+}
+
+
+/* 編集者用
+* ---------------------------------------- */
+/* 「ボックスをここにドラッグ」を非表示 */
+.role-editor #dashboard-widgets-wrap .metabox-holder .postbox-container .empty-container {
+	display: none;
+}
+/*表示オプションとヘルプも非表示*/
+.role-editor #contextual-help-link-wrap{display:none;}
+.role-editor #screen-options-link-wrap{display:none;}
+
+/*管理画面のフッターとバージョン非表示*/
+.role-editor #wpfooter{display:none;}
+
+/*固定ページ サブメニュー非表示*/
+.role-editor #adminmenumain #menu-pages .wp-submenu{display:none;}
+
+/*固定ページ 新規追加ボタン非表示*/
+/* body.post-type-page.role-editor .page-title-action {display: none;} */
+
+/*固定ページ プラグインの複製リンク非表示*/
+body.post-type-page.role-editor .row-actions .clone{display:none;}
+
+/*MW WP Form サブメニュー非表示*/
+.role-editor #adminmenumain #menu-posts-mw-wp-form .wp-submenu{display:none;}
+
+/*MW WP Form 新規追加ボタン非表示*/
+/* body.post-type-mw-wp-form.role-editor .page-title-action{display:none;} */
+
+/*MW WP Form 寄付ボタン非表示*/
+body.post-type-mw-wp-form.role-editor .subsubsub .donation{display:none;}
+
+/*お知らせ サブメニュー非表示*/
+#adminmenumain #menu-posts-news .wp-submenu {display: none;}
+
+/*お知らせ 新規追加ボタン非表示*/
+body.post-type-news .page-title-action {/* display: none; */}

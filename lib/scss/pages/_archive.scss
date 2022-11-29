@@ -1,0 +1,141 @@
+// アーカイブページ
+
+.content-archive {
+	margin-bottom: 20px;
+	article {
+		margin-bottom: 10%;
+	}
+	h2 {
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid $cMain;
+		text-align: left;
+		font-size: 2rem;
+		line-height: 1.4;
+	}
+	.data {
+		font-size: 1.4rem;
+	}
+	.btn_more {
+		text-align: right;
+	}
+	@media only screen and (min-width: $md) {
+		article {
+			margin-bottom: 5%;
+		}
+		h2 {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+//サムネイル／3列
+
+.archive_box_tmb {
+	display: flex;
+	flex-wrap: wrap;
+	.archive_box_inner {
+		width: 30%;
+		margin-right: 5%;
+		margin-bottom: 5%;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		a {
+			text-decoration: none;
+			figure {
+				.img {
+					overflow: hidden;
+					img {
+						max-width: 100%;
+						transition-duration: 0.3s;
+					}
+				}
+				figcaption {
+					text-align: left;
+					line-height: 1.6;
+					margin-top: 10px;
+					h2 {
+						font-weight: normal;
+					}
+				}
+			}
+			&:hover {
+				figure {
+					.img {
+						img {
+							transform: scale(1.1);
+							transition-duration: 0.3s;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: $base_width) {
+		padding-left: 15px;
+		padding-right: 15px;
+		.archive_box_inner {
+		}
+	}
+	@media only screen and (max-width: $md) {
+		.archive_box_inner {
+			width: 48%;
+			margin-right: 4%;
+			margin-bottom: 4%;
+			&:nth-child(3n) {
+				margin-right: 4%;
+			}
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			
+		}
+	}
+}
+
+
+// ページネーション
+// http://web-ashibi.net/archives/971
+.pagination {
+	clear: both;
+	width: 100%;
+	padding: 20px 0;
+	position: relative;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: center;
+	.pagination-box {
+		display: inline-block;
+		span,
+		a {
+			display: block;
+			float: left;
+			margin: 2px 2px 2px 0;
+			padding: 10px 15px 10px 15px;
+			text-decoration: none;
+			width: auto;
+			color: #fff;
+			background: $cMain;
+		}
+		a:hover {
+			background: rgba( $cMain, 0.8);
+		}
+		.current{
+			padding: 10px 15px 10px 15px;
+			background: rgba( $cMain, 0.8);
+			color: #fff;
+		}
+	}
+	@media only screen and (max-width: 413px) {
+	font-size: 12px;
+	line-height: 12px;
+		span,
+		a {
+			padding: 8px 10px 8px 10px;
+		}
+		.current{
+			padding: 8px 10px 8px 10px;
+		}
+	}
+}

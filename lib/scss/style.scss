@@ -1,0 +1,37 @@
+@charset "utf-8";
+// ===================================================================
+// 各SCSSファイルのインポート
+// ===================================================================
+@import "setting";            //設定用
+@import "parts/plugin";       //プラグイン
+
+//base
+@import "base/reset";         // リセットCSS、フォントサイズ
+//pages
+@import "parts/mixin";        // ミックスイン、@extend、CSS3、凡用など
+//base
+@import "base/header";        // レイアウト ヘッダー
+@import "base/footer";        // レイアウト フッター
+@import "base/wordpress";     // WordPress用
+@import "base/sidebar";       // レイアウト サイドバー
+
+//pages
+@import "pages/contents";     // コンテンツ
+@import "pages/pages";        // 固定ページ
+@import "pages/archive";      // アーカイブページ
+@import "pages/single";       // シングルページ
+
+//parts
+@import "parts/custom_parts"; // テンプレートパーツ
+@import "parts/heading";      // 見出し
+@import "parts/main_visual";  // スライダー
+@import "parts/buttons";      // ボタン
+@import "parts/parts";        // パーツその他（SNSなど）
+
+//module
+@import "parts/module";
+//top
+@import "top";                // トップ
+
+//parts
+@import "parts/general";      // 汎用

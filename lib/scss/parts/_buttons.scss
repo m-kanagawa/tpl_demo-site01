@@ -1,0 +1,307 @@
+// ===================================================================
+// ボタン
+// ===================================================================
+
+$btn_more_color: $cMain;
+
+.btn_more {
+	a {
+		position: relative;
+		display: inline-block;
+		padding: 7px 18px;
+		background-color: $btn_more_color;
+		border: 1px solid $btn_more_color;
+		text-decoration: none;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 1.4rem;
+		font-family: $eng_font;
+		line-height: 1;
+		letter-spacing: 2px;
+		transition: 0.2s ease-in-out;
+		&.add_arrow {
+			padding: 7px 18px 5px;
+			&::before,&::after {
+				position: absolute;
+				top: -2px;
+				right: 8px;
+				bottom: 0;
+				content: "";
+				margin: auto;
+				vertical-align: middle;
+				width: 4px;
+				height: 4px;
+				border-top: 1px solid #fff;
+				border-right: 1px solid #fff;
+				transform: rotate(45deg);
+				transition: 0.2s ease-in-out;
+			}
+		}
+		&:hover {
+			background: #fff;
+			border: 1px solid $btn_more_color;
+			color: $btn_more_color;
+			&.add_arrow {
+				&::before,&::after {
+					border-top: 1px solid $btn_more_color;
+					border-right: 1px solid $btn_more_color;
+				}
+			}
+		}
+	}
+	&.inverse {
+		a {
+			color: $btn_more_color;
+			background: #fff;
+			&.add_arrow {
+				&::before,&::after {
+					border-top: 1px solid $btn_more_color;
+					border-right: 1px solid $btn_more_color;
+				}
+			}
+			&:hover {
+				background: $btn_more_color;
+				border: 1px solid #fff;;
+				color: #fff;
+				&.add_arrow {
+					&::before,&::after {
+						border-top: 1px solid #fff;;
+						border-right: 1px solid #fff;;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* btn
+----------------------------------------------------*/
+
+.parts_btn_type_a,
+.parts_btn_type_b,
+.parts_btn_type_c {
+	margin: 20px 0;
+}
+
+.parts_btn_type_a {
+	margin: 20px 0;
+	a {
+		position: relative;
+		display: inline-block;
+		min-width: 280px;
+		padding: 1em 2em;
+		background-color: $cBtn;
+		// border-radius: 5px;
+		color: $cBtnText;
+		font-size: 1.6rem;
+		line-height: 1.42;
+		text-decoration: none;
+		text-align: center;
+		border: 1px solid $cBtn;
+		box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+		-webkit-transition: background-color 0.35s,color 0.35s;
+		transition: background-color 0.35s,color 0.35s;
+		letter-spacing: 2px;
+		&:hover {
+			// border-radius: 5px;
+			color: $cBtn;
+			background: $cBtnText;
+			border: 1px solid $cBtn;
+			-webkit-transition: background-color 0.35s,color 0.35s;
+			transition: background-color 0.35s,color 0.35s;
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 7%;
+			margin: auto;
+			width: 6px;
+			height: 6px;
+			border-top: 1px solid $cBtnText;
+			border-right: 1px solid $cBtnText;
+			transform: translate(0, -50%) rotate(45deg);
+			transition: 0.2s;
+		}
+		&:hover::after {
+			right: 5%;
+			border-top: 1px solid $cBtn;
+			border-right: 1px solid $cBtn;
+		}
+	}
+	// a {
+	// 	display: inline-block;
+	// 	padding: 1em 1.8em;
+	// 	background-color: $cBtn;
+	// 	border-radius: 5px;
+	// 	color: $cBtnText;
+	// 	font-size: 1.6rem;
+	// 	line-height: 1.42;
+	// 	text-decoration: none;
+	// 	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	// 	-webkit-transition: background-color 0.35s,color 0.35s;
+	// 	transition: background-color 0.35s,color 0.35s;
+	// 	letter-spacing: 2px;
+	// 	&:hover {
+	// 		border-radius: 5px;
+	// 		background:lighten( $cBtn, 15% );
+	// 		-webkit-transition: background-color 0.35s,color 0.35s;
+	// 		transition: background-color 0.35s,color 0.35s;
+	// 	}
+	// }
+	&.btn_sm {
+		a {
+			font-size: 1.4rem;
+		}
+	}
+	&.btn_lg {
+		a {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.parts_btn_type_b {
+	margin: 20px 0;
+	a {
+		display: inline-block;
+		padding: 1em 1.8em;
+		background-color: $cBtnText;
+		border: 2px solid $cBtn;
+		border-radius: 5px;
+		color: $cBtn;
+		font-size: 1.6rem;
+		line-height: 1.42;
+		text-decoration: none;
+		-webkit-transition: background-color 0.35s,color 0.35s;
+		transition: background-color 0.35s,color 0.35s;
+		letter-spacing: 2px;
+		&:hover {
+			border-radius: 5px;
+			background-color: $cBtn;
+			color: $cBtnText;
+			-webkit-transition: background-color 0.35s,color 0.35s;
+			transition: background-color 0.35s,color 0.35s;
+		}
+	}
+	&.btn_sm {
+		a {
+			font-size: 1.4rem;
+		}
+	}
+	&.btn_lg {
+		a {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.parts_btn_type_c {
+	margin: 20px 0;
+	a {
+		display: inline-block;
+		padding: 1em 1.8em;
+		background-color: $cBtn;
+		border-radius: 2em;
+		color: $cBtnText;
+		font-size: 1.6rem;
+		line-height: 1.42;
+		text-decoration: none;
+		box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+		-webkit-transition: background-color 0.35s,color 0.35s;
+		transition: background-color 0.35s,color 0.35s;
+		letter-spacing: 2px;
+		&:hover {
+			background:lighten( $cBtn, 15% );
+			-webkit-transition: background-color 0.35s,color 0.35s;
+			transition: background-color 0.35s,color 0.35s;
+		}
+	}
+	&.btn_sm {
+		a {
+			font-size: 1.4rem;
+		}
+	}
+	&.btn_lg {
+		a {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.btnBox {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.btn01 {
+	a {
+		min-width: 300px;
+		padding: 10px 30px;
+		display: inline-block;
+		background-color: $cMain;
+		text-decoration: none;
+		-webkit-appearance: none;
+		border-radius: 5px;
+		font-size: 1.6rem;
+		color: #FFF;
+		box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+		-webkit-transition: background-color 0.35s,color 0.35s;
+		transition: background-color 0.35s,color 0.35s;
+		//border: 1px solid $cMain;
+		//cursor:pointer;
+		letter-spacing: 2px;
+		&:hover {
+			border-radius: 5px;
+			background:lighten( $cMain, 15% );
+			//color: $cText;
+			-webkit-transition: background-color 0.35s,color 0.35s;
+			transition: background-color 0.35s,color 0.35s;
+			//border: 1px solid $cMain;
+		}
+	}
+}
+.btn02 {
+	a {
+		font-size: 1.6rem;
+		padding: 10px 70px;
+		display: inline-block;
+		background-color: #193662;
+		text-decoration: none;
+		-webkit-appearance: none;
+		border-radius: 5px;
+		color: #fff;
+		box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+		-webkit-transition: background-color 0.35s,color 0.35s;
+		transition: background-color 0.35s,color 0.35s;
+		//border: 1px solid $cMain;
+		//cursor:pointer;
+		letter-spacing: 2px;
+		&:hover {
+			border-radius: 5px;
+			background: $cMain;
+			color: #fff;
+			box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+			-webkit-transition: background-color 0.35s,color 0.35s;
+			transition: background-color 0.35s,color 0.35s;
+			//border: 1px solid $cMain;
+		}
+	}
+}
+
+
+@media screen and (max-width: $md) {
+	.btn01 {
+		a {
+			width: 90%;
+			min-width: auto;
+			padding: 10px 40px;
+		}
+	}
+	.btn02 {
+		a {
+			padding: 10px 30px;
+		}
+	}
+}

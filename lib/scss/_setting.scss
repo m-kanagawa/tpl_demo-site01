@@ -1,0 +1,108 @@
+@charset "utf-8";
+// ===================================================================
+// 設定
+// ===================================================================
+
+// ------------------------------
+// -- フォント
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
+
+// base
+$font_base_gothic: "Noto Sans JP", "-apple-system", BlinkMacSystemFont, "Helvetica Neue", Roboto, "Droid Sans", Arial, "Yu Gothic", YuGothic, Meiryo, sans-serif;
+
+//游ゴシック
+$yugo_font: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+
+// 明朝
+$font_base_mincho: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+// 英語
+$eng_font: 'Ubuntu', "Noto Sans JP", "-apple-system", BlinkMacSystemFont, "Helvetica Neue", Roboto, "Droid Sans", Arial, "Yu Gothic", YuGothic, Meiryo, sans-serif;
+
+// ベースフォント・ベースフォントサイズ
+$base_font_family: $font_base_gothic;
+$base_font_size: 1.6; // rem
+
+// ------------------------------
+// -- サイズ
+
+$xs: 0px;
+$sm: 576px;
+$md: 768px;// スマホ表示幅
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$base_width: 1200px;
+$main_width: 740px;
+$main_visual_width: 100%;
+
+$tb_width: 1024px;
+
+// ------------------------------
+// -- カラー
+
+//カラー
+$cWhite: #fff;
+$cRed: #ff2626;
+$cGray: #efefef;
+$cPink: #ffe1e1;
+$cBlue: #e8e9ff;
+$cGreen: #edffe8;
+
+//基本
+$cBase: $cWhite;      // ベースカラー
+$cMain: #54c2f0;   // メインカラー
+$cSub: #808080;    //サブカラー
+$cAccent: #ff7011; // アクセントカラー
+$cText: #434343;	 //テキストカラー
+$cTextReversal: $cWhite;	 //テキストカラー反転
+
+//body・footer
+$cBody: $cBase;
+$cFooter: $cMain;
+$cFooterText: $cWhite;
+
+//Gナビ
+$cNav: $cMain;
+$cNavHover: $cMain;
+$cNavText: $cWhite;
+$cNavTextHover: $cWhite;
+
+//ボタン
+$cBtn: $cMain;
+$cBtnText: $cWhite;
+
+//見出し
+$cH1Text: $cWhite;
+$cH1Bg: $cMain;
+$cH2Text: $cText;
+$cH2Bg: $cMain;
+$cH3Text: $cText;
+$cH3Bg: $cSub;
+$cH4Text: $cText;
+$cH4Bg: $cMain;
+
+//リンク
+$cLink: $cMain;
+$cLinkVisited: $cText;
+$cLinkHover: #005bab;
+$cLinkActive: $cText;
+
+//テーブル
+$cTableThText: $cWhite;
+$cTableTdText: $cText;
+$cTableThBg: $cMain;
+$cTableTdBg: $cWhite;
+$cTableThBorder: #efefef;
+$cTableTdBorder: #efefef;
+
+// ------------------------------
+// -- ディフォルト設定
+
+.cRed {color: $cRed;}
+
+a {color: $cMain;}
+a:hover {text-decoration: none;}

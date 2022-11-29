@@ -1,0 +1,83 @@
+// 共通
+
+/* スクロールバーの有無によるズレ対策 */
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+}
+body {
+	overflow: hidden;
+	position: relative;
+	color: $cText;
+	font-size: $base_font_size + rem;
+  font-family: $base_font_family;
+  line-height: 1.8;
+  background-color: $cBody;
+  @media only screen and (max-width: $md) {
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.entry-content > .inner > *:first-child {
+	margin-top: 0;
+}
+
+.entry-content {
+	margin-bottom: 100px;
+}
+
+/* コンテンツ共通
+----------------------------------------------------*/
+/* 12 COLUMN : RESPONSIVE GRID SYSTEM SPレイアウト */
+@media(max-width :767px){.sp_image_cols{&:not(.sp_col2):not(.sp_col3){.col{&:not(:last-child){margin-bottom:1em}figure{overflow:hidden;img{float:left;width:32%;margin-bottom:10px;vertical-align:middle}figcaption{float:right;width:66%;margin-top:0;vertical-align:middle}}}}&.sp_col2{.col{width:49%;&:nth-child(odd){clear:both;float:left}&:nth-child(even){float:right}}}&.sp_col3{.col{float:left;width:32%;&:nth-child(3n+1){clear:both;margin-right:2%}&:nth-child(3n){float:right}}}}}
+
+figcaption, figure {
+	text-align: center;
+}
+body:not(.home) {
+	main {
+		min-height: 711px;
+	}
+}
+
+main > *:last-child,
+main > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child {
+	margin-bottom: 0;
+}
+
+//<a href="tel:">のリンクをPC表示時に無効
+@media(min-width: 768px) {
+  a[href^="tel:"]{
+    pointer-events: none;
+    text-decoration: none;
+    color: $cText;
+  }
+}
+
+//アコーディオンメニューの親リンククリック無効
+.header_nav_list > li > a[href^="#"] {
+	// pointer-events: none;
+}
+
+.inner {
+	max-width: $base_width;
+	padding: 0 15px;
+	margin: auto;
+	box-sizing: content-box;
+}
+
+.content-width {
+	padding: 0 15px;
+	max-width: $base_width;
+	box-sizing: content-box;
+}

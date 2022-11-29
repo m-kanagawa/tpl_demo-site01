@@ -1,0 +1,246 @@
+// ===================================================================
+// 固定ページ
+// ===================================================================
+
+/* page（個別ページ）
+----------------------------------------------------*/
+//コンテンツパーツ使用時に色を変更する
+
+.bg_color01,
+.bg_color02 {
+	padding: 60px 0;
+	width: 100vw;
+	max-width: none;
+	margin: 0 calc(50% - 50vw);
+	background-color: #eee;
+	.row,.inner {
+		max-width: $base_width;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: auto;
+		box-sizing: content-box;
+		> .col *:last-child {margin-bottom: 0;}
+		@media only screen and (max-width: $base_width) {
+		}
+	}
+}
+.bg_color02 {
+	background-color: #fff8f2;
+}
+
+
+
+
+/*  サイトマップ
+----------------------------------------------------*/
+.body-sitemap {
+	.sec_sitemap {
+		ul {
+			border-top: 1px solid #ccc;
+			li {
+				list-style: none;
+				border-bottom: 1px solid #ccc;
+				a {
+					display: block;
+					position: relative;
+          padding: 10px 15px 10px 15px;
+          font-size: 1.6rem;
+					text-decoration: none;
+					&::before {
+						position: relative;
+						top: -2px;
+						content: '';
+						display: inline-block;
+						margin-right: 10px;
+						width: 7px;
+						height: 7px;
+						background-color: $cMain;
+					}
+					&:hover {
+						background-color: rgba( $cMain, 0.2 );
+					}
+        }
+        > ul {
+          li {
+            &:last-child {
+              border-bottom: none;
+						}
+						a {
+							padding-left: 40px;
+							&::before {
+								width: 5px;
+								height: 5px;
+								border-radius: 5px;
+							}
+						}
+          }
+        }
+			}
+		}
+	}
+}
+
+// パスワード保護ページ
+//----------------------------------------------------
+.post-password-form {
+	padding: 100px 0 400px;
+}
+
+// 404ページ
+//----------------------------------------------------
+.box404 {
+	padding: 100px 15px 200px;
+	word-wrap: break-word;
+}
+
+// お問い合わせ
+//----------------------------------------------------
+$cReqBg: #f44522;
+$cReqText: #fff;
+
+.contact-box {
+	width: 100%;
+	max-width: $base_width;
+	&__inner {
+	}
+	&__dl {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+	}
+	dt,dd {
+		width: 100%;
+		border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+		box-sizing: border-box;
+	}
+	dt {
+		display: flex;
+		align-items: center;
+		padding: 15px 15px 0;
+		border-bottom: none;
+	}
+	dd {
+		padding: 15px 10px;
+	}
+	@media (min-width: $md) {
+		&__dl {
+			flex-direction: row;
+		}
+		dt {
+			width: 40%;
+			padding: 15px 15px 15px 25px;
+			border-right: none;
+			border-bottom: 1px solid #ddd;
+		}
+		dd {
+			width: calc(100% - 40%);
+		}
+	}
+	.req {
+		font-size: 1.1rem;
+		background: $cReqBg;
+		color: $cReqText;
+		padding: 3px 6px 4px 5px;
+		margin-right: 10px;
+		position: relative;
+		top: -2px;
+	}
+	.ex {
+		font-size: 1.1rem;
+		background: #f3f3f3;
+		display: inline-block;
+		padding: 2px 6px 3px;
+		position: relative;
+		top: -2px;
+		margin-right: 5px;
+	}
+	.zip_code { max-width: 200px; }
+	input,
+	textarea,
+	select {
+		padding: 12px;
+		border: 1px solid #e1e1e1;
+		border-radius: 5px;
+		color: #666;
+		box-shadow: 0 0 2px #d6d6d6 inset;
+	}
+	input,
+	textarea {
+		width: 100%;
+		line-height: 1.4;
+	}
+	input[type=checkbox],
+	input[type=radio] {
+		width: auto;
+	}
+	input[type=text]:focus,
+	textarea:focus {
+		border-color:#83B6C2;
+		outline:none;
+		box-shadow:2px 2px 4px rgba(143,183,222,0.6),-2px -2px 4px rgba(143,183,222,0.6),inset 0 1px 2px rgba(#333,0.2);
+	}
+	.submit_btn {
+		text-align: center;
+		padding: 3%;
+		width: 100%;
+	}
+	input[type="submit"] {
+		width: 100%;
+		max-width: 280px;
+		margin: 0 10px 10px 10px;
+		-webkit-appearance: none;
+		border-radius: 5px;
+		background: $cMain;
+		color: #FFF;
+		box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+		border: 1px solid $cMain;
+		cursor: pointer;
+		letter-spacing: 2px;
+		font-size: 1.8rem;
+		&:hover {
+			border-radius: 5px;
+			background: #fff;
+			color: #333;
+			box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+			transition: background-color 0.35s,color 0.35s;
+			border: 1px solid $cMain;
+		}
+		&[name="submitBack"] {
+			background-color: #999;
+			border: 1px solid #999;
+			&:hover {
+				background: #fff;
+			}
+		}
+	}
+}
+
+::-webkit-input-placeholder { color:#AFAFAF; }
+:-moz-placeholder { color:#AFAFAF; }
+
+//プラグイン
+// radio、checkbox縦並び
+.mwform-radio-field,
+.mwform-checkbox-field {
+	display: block;
+	margin-left: 0 !important;
+}
+
+.mw_wp_form .error {
+	font-size: 80% !important;
+	color: #f44522 !important;
+	display: block;
+	padding-top: 5px;
+}
+//お問い合わせ完了画面
+.mw_wp_form.mw_wp_form_complete {
+	margin: 50px auto 350px;
+}
+//tel and zip
+.mwform-tel-field input[type="text"],
+.mwform-zip-field input[type="text"] {
+	width: 25% !important;
+}

@@ -1,0 +1,42 @@
+<div class="contact-box">
+	<div class="contact-box__inner">
+		<dl class="contact-box__dl">
+			<dt>
+				<label for="name">会社名</label>
+			</dt>
+			<dd>[mwform_text name="company" id="company" placeholder="例：株式会社〇〇"]</dd>
+			<dt>
+				<label for="name"><span class="req">必須</span>お名前</label>
+			</dt>
+			<dd>[mwform_text name="name" id="name" placeholder="例：山田太郎"]</dd>
+			<dt>
+				<label for="kana"><span class="req">必須</span>ふりがな</label>
+			</dt>
+			<dd>[mwform_text name="kana" id="kana" placeholder="例：やまだたろう"]</dd>
+			<dt>
+				<label for="email"><span class="req">必須</span>メールアドレス</label>
+			</dt>
+			<dd>[mwform_text name="email" id="email" placeholder="例：abc@example.com"]</dd>
+			<dt>
+				<label for="tel">お電話番号</label>
+			</dt>
+			<dd>[mwform_tel name="tel" placeholder="例：123-456-7890"]</dd>
+			<dt>
+				<label for="zip_code">郵便番号</label>
+			</dt>
+			<dd>[mwform_text name="zip_code" id="zip_code" class="zip_code" conv_half_alphanumeric="false"
+				placeholder="※半角でご記入ください"]</dd>
+			<dt>
+				<label for="tel">住所</label>
+			</dt>
+			<dd>[mwform_text name="address" id="address"]</dd>
+			<dt>
+				<label for="naiyou"><span class="req">必須</span>お問い合わせ内容</label>
+			</dt>
+			<dd>[mwform_textarea name="naiyou" id="naiyou" placeholder="お問い合わせ内容を入力ください"]</dd>
+		</dl>
+	</div>
+	<div class="submit_btn">
+		<p class="submitBtn">[mwform_backButton value="戻る"][mwform_submitButton preview_value="入力内容を確認する" submit_value="送信する"]</p>
+	</div>
+</div>

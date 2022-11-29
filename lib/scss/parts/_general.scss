@@ -1,0 +1,184 @@
+// ===================================================================
+// 汎用
+// ===================================================================
+
+
+// bg
+//---------------------------------------
+
+.bg_white,
+.bg_gray,
+.bg_pink,
+.bg_blue,
+.bg_green {
+	padding: 15px;
+	margin: 0 0 20px;
+	background-color: $cWhite;
+	*:last-child,
+	*:last-child > *:last-child {
+		margin-bottom: 0;
+	}
+	@media screen and (min-width: $md) {
+		padding: 20px;
+		margin: 0 0 20px;
+	}
+}
+.bg_gray{background-color: $cGray;}
+.bg_pink{background-color: $cPink;}
+.bg_blue{background-color: $cBlue;}
+.bg_green{background-color: $cGreen;}
+
+
+
+// flexbox
+//---------------------------------------
+.row-1-9,
+.row-2-8,
+.row-3-7,
+.row-4-6,
+.row-5-5,
+.row-6-4,
+.row-7-3,
+.row-8-2,
+.row-9-1 {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10%;
+	.left,
+	.right {
+		width: 100%;
+		img {
+			max-width: 90%;
+			margin: auto;
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+	@media (min-width: $md) {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 5%;
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+		&.row-1-9 .left { width: 8%;}
+		&.row-1-9 .right {width: 89%;}
+		&.row-2-8 .left { width: 18%;}
+		&.row-2-8 .right {width: 79%;}
+		&.row-3-7 .left { width: 28%;}
+		&.row-3-7 .right {width: 69%;}
+		&.row-4-6 .left { width: 38%;}
+		&.row-4-6 .right {width: 59%;}
+		&.row-5-5 .left { width: 49%;}
+		&.row-5-5 .right {width: 48%;}
+		&.row-6-4 .left { width: 59%;}
+		&.row-6-4 .right {width: 38%;}
+		&.row-7-3 .left { width: 69%;}
+		&.row-7-3 .right {width: 28%;}
+		&.row-8-2 .left { width: 79%;}
+		&.row-8-2 .right {width: 18%;}
+		&.row-9-1 .left { width: 89%;}
+		&.row-9-1 .right {width: 8%;}
+		.left,
+		.right {
+			img {
+				max-width: 100%;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+// decoration
+//---------------------------------------
+.bold {font-weight:bold;}
+.underline {text-decoration: underline;}
+
+// color
+.text-white {color: #fff;}
+.text-black {color: #000;}
+.text-red {color: #F33;}
+.text-yellow {color: #FFF100;}
+.text-pink {color: #fe64b7;}
+.text-green {color: #10ac14;}
+.text-orange {color: #ff4e00;}
+
+// hover
+//---------------------------------------
+.mk {
+	transition: 0.2s ease-in-out;
+	&:hover { opacity: 0.8; }
+}
+
+// font-size
+//---------------------------------------
+.fz16 {font-size: 1.6rem;}
+.fz18 {font-size: 1.8rem;}
+.fz22 {font-size: 2.2rem;}
+.fz25 {font-size: 2.5rem;}
+.fz28 {font-size: 2.8rem;}
+
+.text-xxlarge { font-size: 2.4rem; }
+.text-xlarge { font-size: 2.0rem; }
+.text-large { font-size: 1.6rem; }
+.text-small { font-size: 1.2rem; }
+.text-xsmall { font-size: 1.0rem; }
+@media ( min-width : 768px ) {
+	.text-xxlarge { font-size: 3.6rem; }
+	.text-xlarge { font-size: 2.8rem; }
+	.text-large { font-size: 2.0rem; }
+	.text-small { font-size: 1.2rem; }
+	.text-xsmall { font-size: 1.0rem; }
+}
+
+/*   clerfix
+---------------------------------------------------- */
+
+.clerfix {
+	*zoom: 1;
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
+}
+// text
+//-------------------------------------------------
+.text-center { text-align: center !important;}
+.text-left { text-align: left !important;}
+.text-right { text-align: right !important;}
+
+@media ( min-width : $md ) {
+	.pc-hide, .sp-only { display: none !important;}
+	.pc-text-center { text-align: center !important;}
+	.pc-text-left { text-align: left !important;}
+	.pc-text-right { text-align: right !important;}
+}
+@media ( max-width : $md - 1 ) {
+	.sp-hide, .pc-only, .tablet-only { display: none !important;}
+	.sp-text-center { text-align: center !important;}
+	.sp-text-left { text-align: left !important;}
+	.sp-text-right { text-align: right !important;}
+}
+
+
+// margin padding
+// ----------------------------------------------------------
+$space: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
+@each $prefix in $space{
+	// top
+	.mt#{$prefix} { margin-top:   #{$prefix}px !important; }
+	.pt#{$prefix} { padding-top:   #{$prefix}px !important; }
+	// right
+	.mr#{$prefix} { margin-right: #{$prefix}px !important; }
+	.pr#{$prefix} { padding-right:   #{$prefix}px !important; }
+	// bottom
+	.mb#{$prefix} { margin-bottom:#{$prefix}px !important; }
+	.pb#{$prefix} { padding-bottom:   #{$prefix}px !important; }
+	// left
+	.ml#{$prefix} { margin-left:  #{$prefix}px !important; }
+	.pl#{$prefix} { padding-left:   #{$prefix}px !important; }
+}

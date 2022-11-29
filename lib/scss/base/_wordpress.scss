@@ -1,0 +1,119 @@
+
+//--------------------------------------------
+// Gutenberg
+//--------------------------------------------
+
+
+ul.wp-block-gallery {
+	margin-left: 0;
+}
+
+
+.wp-block-media-text {
+	margin-bottom: 1em;
+}
+
+@media only screen and (max-width: $md) {
+
+}
+
+//--------------------------------------------
+// wordpress
+//--------------------------------------------
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+	&.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+	&.alignleft {
+		margin: 5px 20px 20px 0;
+	}
+	&.alignright {
+		margin: 5px 0 20px 20px;
+	}
+	img {
+		border: 0 none;
+		height: auto;
+		margin: 0;
+		max-width: 98.5%;
+		padding: 0;
+		width: auto;
+	}
+	p.wp-caption-text {
+		font-size: 11px;
+		line-height: 17px;
+		margin: 0;
+		padding: 0 4px 5px;
+	}
+}
+//▼　Theme Checkを通すために記述　使用していない
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	&:focus {
+		background-color: #f1f1f1;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		color: #21759b;
+		display: block;
+		font-size: 14px;
+		font-size: 0.875rem;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+.sticky,
+.gallery-caption,
+.bypostauthor {margin: 0;}
+
+
+.wp-block-quote {
+
+}
+
+//引用
+blockquote {
+	position: relative;
+	z-index: 2;
+	padding: 30px;
+	box-sizing: border-box;
+	font-style: italic;
+	color: #464646;
+	background: #efefef;
+	border: none;
+	&::before,
+	&::after {
+		display: inline-block;
+		position: absolute;
+		z-index: -1;
+		content: "\f10d";
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		color: rgba(#fff,.7);
+		font-size: 46px;
+	}
+	&::before{
+		top: 0; left: 15px;
+	}
+	&::after{
+		bottom: 0; right: 15px;
+	}
+}
+

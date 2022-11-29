@@ -1,0 +1,137 @@
+// ===================================================================
+// パーツ
+// ===================================================================
+
+// 検索フォーム
+//----------------------------------------------------
+.searchform_box {
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid $cMain;
+  display: block;
+  padding: 0 10px;
+  border-radius: 3px;
+  height: 2.3em;
+  overflow: hidden;
+  input[type="text"] {
+    border: none;
+    height: 2.0em;
+    width: calc(100% - 3.5em);
+    &:focus {
+      outline: 0;
+    }
+  }
+  input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    border: none;
+    background: $cMain;
+    color: #fff;
+    position: absolute;
+    width: 3.5em;
+    height: 3.0em;
+    right:0px;
+    top: -5px;
+    outline : none;
+  }
+}
+
+// table
+//----------------------------------------------------
+// 診療時間テーブル
+.table_schedule {
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  caption {
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  th, td {
+    border: 1px solid $cTableThBorder;
+    padding: 5px;
+    text-align: center;
+  }
+  thead th {
+    background: darken( $cMain, 20% );
+    color: $cTableThText;
+  }
+  tbody th {
+    background: $cTableThBg;
+    color: $cTableThText;
+  }
+  td {
+    background: $cTableTdBg;
+    color: $cTableTdText;
+  }
+}
+
+// List
+//----------------------------------------------------
+ul.list {
+  list-style: none;
+  padding: 0 0 0 1.3em;
+	li {
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 2px;
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: .6em;
+      left: -1em;
+      width: 7px;
+      height: 7px;
+      background-color: $cMain;
+      border-radius: 100%;
+    }
+  }
+}
+
+ol.list-ol {
+	counter-reset: item;
+	padding-left: 1em;
+	li {
+		text-indent: -1.3em;
+		padding-left: 1.3em;
+		margin-bottom: 10px;
+		&::before {
+			counter-increment: item;
+			content: counter(item)'.';
+			/* 以下は自由に装飾... */
+			padding-right: .5em;
+			font-weight: bold;
+			color: $cSub;
+		}
+	}
+}
+
+
+// SNS
+//----------------------------------------------------
+.share_button {
+  max-width: $base_width;
+  padding: 80px 0;
+  margin: auto;
+  @media screen and (max-width: $md) {
+    width: 100%;
+    padding: 40px 15px;
+  }
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+}
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
+
+// 印刷用CSS
+//----------------------------------------------------
+@media print {
+
+}

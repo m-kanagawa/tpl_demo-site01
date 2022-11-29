@@ -1,0 +1,49 @@
+/* single（シングルページ）
+----------------------------------------------------*/
+
+
+.single-text-box {
+	overflow: hidden;
+/* editor */
+	p {
+		// display: block;
+		// margin: 1em 0;
+	}
+	strong { font-weight: bold; }
+	em { font-style: italic; }
+	blockquote {
+		display: block;
+		-webkit-margin-before: 1em;
+		-webkit-margin-after: 1em;
+		-webkit-margin-start: 40px;
+		-webkit-margin-end: 40px;
+	}
+	/* img */
+	.aligncenter {
+		display: block;
+		margin: 0 auto;
+	}
+	.alignright {
+		float: right;
+		margin-left: 1%;
+		margin-bottom: 1%;
+	}
+	.alignleft {
+		float: left;
+		margin-right: 1%;
+		margin-bottom: 1%;
+	}
+	img[class*="wp-image-"],
+	img[class*="attachment-"] {
+		height: auto;
+		max-width: 100%;
+	}
+	@media only screen and (max-width: $md) {
+		.alignright,
+		.alignleft { 
+			float: none;
+			margin: auto;
+			display: block; 
+		}
+	}
+}
