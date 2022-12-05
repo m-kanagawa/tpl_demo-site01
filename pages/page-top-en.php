@@ -1,4 +1,4 @@
-<?php /*Template Name: page-top */ ?>
+<?php /*Template Name: page-top-en */ ?>
 <?php get_header(); ?>
 
 <!-- Slider全体のコンテナ -->
@@ -9,26 +9,26 @@
 			<img src="<?php echo get_template_directory_uri(); ?>/lib/img/image1.jpg" class="pc-only" alt="">
 			<img src="<?php echo get_template_directory_uri(); ?>/lib/img/image1_sp.jpg" class="sp-only" alt="">
 			<div class="mk-mv__copy">
-				<p class="passingBar"><span class="passingBarIn">追いかけ続ける勇気さえあれば、</span></p>
-				<p class="passingBar delay1"><span class="passingBarIn">夢は必ず叶います</span></p>
+				<p class="passingBar"><span class="passingBarIn">All your dreams can come true,</span></p>
+				<p class="passingBar delay1"><span class="passingBarIn">if we have the courage to pursue them.</span></p>
 			</div>
 		</div>
 		<div class="swiper-slide">
 			<img src="<?php echo get_template_directory_uri(); ?>/lib/img/image2.jpg" class="pc-only" alt="">
 			<img src="<?php echo get_template_directory_uri(); ?>/lib/img/image2_sp.jpg" class="sp-only" alt="">
 			<div class="mk-mv__copy">
-				<p class="passingBar"><span class="passingBarIn">時には、</span></p>
-				<p class="passingBar delay1"><span class="passingBarIn">問いが複雑になっているだけで、</span></p>
-				<p class="passingBar delay2"><span class="passingBarIn">答えはごくシンプルなこと</span></p>
-				<p class="passingBar delay3"><span class="passingBarIn">だったりします</span></p>
+				<p class="passingBar"><span class="passingBarIn">Sometimes the questions</span></p>
+				<p class="passingBar delay1"><span class="passingBarIn">are complicated and</span></p>
+				<p class="passingBar delay2"><span class="passingBarIn">the answers are simple.</span></p>
 			</div>
 		</div>
 		<div class="swiper-slide">
 			<img src="<?php echo get_template_directory_uri(); ?>/lib/img/image3.jpg" class="pc-only" alt="">
 			<img src="<?php echo get_template_directory_uri(); ?>/lib/img/image3_sp.jpg" class="sp-only" alt="">
 			<div class="mk-mv__copy">
-				<p class="passingBar"><span class="passingBarIn">人間が授かった大いなる才能、</span></p>
-				<p class="passingBar delay1"><span class="passingBarIn">それは共感する力です</span></p>
+				<p class="passingBar"><span class="passingBarIn">The great gift of human beings</span></p>
+				<p class="passingBar delay1"><span class="passingBarIn">is that we have the power</span></p>
+				<p class="passingBar delay2"><span class="passingBarIn">of empathy.</span></p>
 			</div>
 		</div>
 	</div>
@@ -46,7 +46,7 @@
 </section>
 
 
-<section class="sec02">
+<section class="sec01">
 	<div class="sec01__inner">
 		<h2>h2タイトルタイトルタイトルタイトルタイトル</h2>
 		<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>

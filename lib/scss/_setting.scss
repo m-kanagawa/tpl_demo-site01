@@ -2,7 +2,11 @@
 // ===================================================================
 // 設定
 // ===================================================================
-
+:root {
+	--w-logo: min(20vw,260px);
+	--w-logo-sp: min(46vw,260px);
+	--mv-space: min(4vw,60px);
+}
 // ------------------------------
 // -- フォント
 
@@ -54,7 +58,7 @@ $cGreen: #edffe8;
 
 //基本
 $cBase: $cWhite;      // ベースカラー
-$cMain: #ffA723;   // メインカラー
+$cMain: #e94cbf;   // メインカラー
 $cSub: #808080;    //サブカラー
 $cAccent: #ff7011; // アクセントカラー
 $cText: #434343;	 //テキストカラー
@@ -68,7 +72,7 @@ $cFooterText: $cWhite;
 //Gナビ
 $cNav: $cMain;
 $cNavHover: $cMain;
-$cNavText: $cWhite;
+$cNavText: $cText;
 $cNavTextHover: $cWhite;
 
 //ボタン

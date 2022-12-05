@@ -6,6 +6,24 @@
 //-- グラデーション
 //-- formスタイルリセット
 
+// フォントサイズ
+// ----------------------------------------------------------
+// このmixinは1remを10pxとして作成しています。
+// 理由はこれまでの実制作でhtmlに62.5%を指定している場合が多かったためで、その資産を流用しやすいようにしました。
+// 1行目はDart Sassで除算を使う際に必要な記述です。
+// https://blog.looseknot.jp/css/sass-clamp-fontsize.html
+@use "sass:math";//Dart Sassで除算を使う際に必要な記述
+@mixin clamp_fontsize($fs_min, $width_small, $width_large, $fs_max) {
+  $preferred_vw_base: math.div(($fs_max - $fs_min), ($width_large - $width_small));
+  $preferred_vw: ($preferred_vw_base * 100) * 1vw;
+  $preferred_rem: ($width_small * -1 * $preferred_vw_base + $fs_min) * .1rem;
+  font-size: clamp($fs_min * .1rem, $preferred_rem + $preferred_vw, $fs_max * .1rem);
+}
+// @include clamp_fontsize(fs_min, width_small, width_large, fs_max);
+// @include clamp_fontsize(12, 576, 992, 16); :例
+// font-size: clamp(1.2rem, 0.6461538462rem + 0.9615384615vw, 1.6rem);
+// 最小・最大フォントサイズをそれぞれ12・16px、ブラウザの最小・最大幅をそれぞれ576・992pxとしたい場合
+
 
 // くの字矢印
 // ----------------------------------------------------------

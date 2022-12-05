@@ -376,3 +376,38 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
 }
+
+
+/*--------------------------------------------------------------------------
+------------------------------ Bogo プラグイン -----------------------------
+--------------------------------------------------------------------------*/
+
+//カスタム投稿タイプでBogoを使用
+// add_filter( 'bogo_localizable_post_types', 'my_localizable_post_types', 10, 1 );
+// function my_localizable_post_types( $localizable ) {
+// 	$localizable[] = 'blog';
+// 	$localizable[] = 'item';
+// 	$localizable[] = 'product';
+// 	return $localizable;
+// }
+
+//言語スイッチャーのテキストやタイトルを変更
+add_filter( 'bogo_language_switcher_links', 'custom_bogo_language_title_name', 10, 2 );
+function custom_bogo_language_title_name( $links ) {
+  foreach ( $links as $code => $name ) {
+    if ( $name['lang'] === 'en-US' ) {
+      $links[$code]['title'] = 'En';
+      $links[$code]['native_name'] = 'En';
+    } elseif ( $name['lang'] === 'ja' ) {
+      $links[$code]['title'] = 'Jp';
+      $links[$code]['native_name'] = 'Jp';
+    }
+  }
+  return $links;
+}
+
+//言語スイッチャーの国旗を非表示
+add_filter( 'bogo_use_flags', 'remove_bogo_lang_flags' );
+function remove_bogo_lang_flags() {
+  return false;
+}

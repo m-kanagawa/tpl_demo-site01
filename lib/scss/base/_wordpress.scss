@@ -1,4 +1,84 @@
 
+
+
+
+// プラグイン：Tabby Responsive Tabs
+
+.responsive-tabs .responsive-tabs__list__item--active,
+.responsive-tabs .responsive-tabs__list__item--active:hover {
+	background: #fff;
+	border-color: #ddd;
+	color: #666;
+	padding-bottom: 11px;
+	margin-top: 0;
+	position: relative;
+	top: 1px;
+}
+
+body {
+	.responsive-tabs {
+		.responsive-tabs__list__item {
+			background: rgba($cTableThBg,.7);
+			border: 1px solid #ddd;
+			border-bottom: none;
+			border-radius: 10px 10px 0 0;
+			color: $cTableThText;
+			@include clamp_fontsize(12, 768, 992, 18);
+			// font-size: min(1.2rem,18px);
+			transition: all ,.3s;
+			&:hover {
+				background: $cTableThBg;
+				color: $cTableThText;
+			}
+			&--active {
+				background: $cTableThBg;
+				&:hover {
+					background: $cTableThBg;
+					color: $cTableThText;
+				}
+			}
+			@media (min-width: $md) {
+			}
+		}
+		.responsive-tabs__heading {
+			background: rgba($cTableThBg,.7);
+			color: $cTableThText;
+			font-size: 1.4rem;
+			&::after {
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 6px solid #fff;
+				background-color: transparent;
+				top: 15px;
+				right: 10px;
+			}
+			&:hover {
+				background: $cTableThBg;
+				color: $cTableThText;
+				&::after {
+					border-top: 6px solid #fff;
+				}
+			}
+			&--active {
+				background: $cTableThBg;
+				border-top: 0;
+				border-bottom: 6px solid #fff;
+				&::after {
+					border-top: 0;
+				}
+				&:hover {
+					&::after {
+						border-top: 0;
+						top: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 //--------------------------------------------
 // Gutenberg
 //--------------------------------------------
