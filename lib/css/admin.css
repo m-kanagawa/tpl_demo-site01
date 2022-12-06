@@ -25,14 +25,6 @@
    * Released on: June 16, 2020
    */
   /*!
-  Version: 1.8.0
-  slick.css
-   */
-  /*!
-  Version: 1.8.0
-  slick-theme.css
-   */
-  /*!
   Colorbox Core Style:
   The following CSS is consistent between example themes and should not be altered.
   */
@@ -854,225 +846,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.editor-styles-wrapper .slick-slider {
-  position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-.editor-styles-wrapper .slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.editor-styles-wrapper .slick-list:focus {
-  outline: none;
-}
-.editor-styles-wrapper .slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-.editor-styles-wrapper .slick-slider .slick-track, .editor-styles-wrapper .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.editor-styles-wrapper .slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.editor-styles-wrapper .slick-track:before, .editor-styles-wrapper .slick-track:after {
-  display: table;
-  content: "";
-}
-.editor-styles-wrapper .slick-track:after {
-  clear: both;
-}
-.editor-styles-wrapper .slick-loading .slick-track {
-  visibility: hidden;
-}
-.editor-styles-wrapper .slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-.editor-styles-wrapper [dir=rtl] .slick-slide {
-  float: right;
-}
-.editor-styles-wrapper .slick-slide img {
-  display: block;
-}
-.editor-styles-wrapper .slick-slide.slick-loading img {
-  display: none;
-}
-.editor-styles-wrapper .slick-slide.dragging img {
-  pointer-events: none;
-}
-.editor-styles-wrapper .slick-initialized .slick-slide {
-  display: block;
-}
-.editor-styles-wrapper .slick-loading .slick-slide {
-  visibility: hidden;
-}
-.editor-styles-wrapper .slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-.editor-styles-wrapper .slick-arrow.slick-hidden {
-  display: none;
-}
-.editor-styles-wrapper .slick-loading .slick-list {
-  background: #fff url(../img/parts/ajax-loader.gif) center center no-repeat;
-}
-@font-face {
-  .editor-styles-wrapper {
-    font-family: "slick";
-    font-weight: 400;
-    font-style: normal;
-    src: url(../img/parts/slick.eot);
-    src: url(../img/parts/slick.eot?#iefix) format("embedded-opentype"), url(../img/parts/slick.woff) format("woff"), url(../img/parts/slick.ttf) format("truetype"), url(../img/parts/slick.svg#slick) format("svg");
-  }
-}
-.editor-styles-wrapper .slick-prev, .editor-styles-wrapper .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-.editor-styles-wrapper .slick-prev:hover, .editor-styles-wrapper .slick-prev:focus, .editor-styles-wrapper .slick-next:hover, .editor-styles-wrapper .slick-next:focus {
-  color: transparent;
-  outline: none;
-  background: transparent;
-}
-.editor-styles-wrapper .slick-prev:hover:before, .editor-styles-wrapper .slick-prev:focus:before, .editor-styles-wrapper .slick-next:hover:before, .editor-styles-wrapper .slick-next:focus:before {
-  opacity: 1;
-}
-.editor-styles-wrapper .slick-prev.slick-disabled:before, .editor-styles-wrapper .slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-.editor-styles-wrapper .slick-prev:before, .editor-styles-wrapper .slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.editor-styles-wrapper .slick-prev {
-  left: -25px;
-}
-.editor-styles-wrapper [dir=rtl] .slick-prev {
-  right: -25px;
-  left: auto;
-}
-.editor-styles-wrapper .slick-prev:before {
-  content: "←";
-}
-.editor-styles-wrapper [dir=rtl] .slick-prev:before {
-  content: "→";
-}
-.editor-styles-wrapper .slick-next {
-  right: -25px;
-}
-.editor-styles-wrapper [dir=rtl] .slick-next {
-  right: auto;
-  left: -25px;
-}
-.editor-styles-wrapper .slick-next:before {
-  content: "→";
-}
-.editor-styles-wrapper [dir=rtl] .slick-next:before {
-  content: "←";
-}
-.editor-styles-wrapper .slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-.editor-styles-wrapper .slick-dots {
-  position: absolute;
-  bottom: -25px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-.editor-styles-wrapper .slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-.editor-styles-wrapper .slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-.editor-styles-wrapper .slick-dots li button:hover, .editor-styles-wrapper .slick-dots li button:focus {
-  outline: none;
-}
-.editor-styles-wrapper .slick-dots li button:hover:before, .editor-styles-wrapper .slick-dots li button:focus:before {
-  opacity: 1;
-}
-.editor-styles-wrapper .slick-dots li button:before {
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: "•";
-  text-align: center;
-  opacity: 0.25;
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.editor-styles-wrapper .slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: #000;
-}
 .editor-styles-wrapper #colorbox, .editor-styles-wrapper #cboxOverlay, .editor-styles-wrapper #cboxWrapper {
   position: absolute;
   top: 0;
@@ -1254,6 +1027,412 @@
 }
 .editor-styles-wrapper #ajax-wrap {
   margin: 20px;
+}
+.editor-styles-wrapper ul.ani-list.up li {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+.editor-styles-wrapper ul.ani-list.down li {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+.editor-styles-wrapper ul.ani-list.left li {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+.editor-styles-wrapper ul.ani-list.right li {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+.editor-styles-wrapper .ani-list > * {
+  -webkit-transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.8s;
+  transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.8s;
+  opacity: 0;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > * {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(1) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(2) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(3) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(4) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(5) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(6) {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(7) {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(8) {
+  -webkit-transition-delay: 2.4s;
+          transition-delay: 2.4s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(9) {
+  -webkit-transition-delay: 2.7s;
+          transition-delay: 2.7s;
+}
+.editor-styles-wrapper .ani-list.js-ani-on > *:nth-child(10) {
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+}
+.editor-styles-wrapper .top-text__inner p {
+  opacity: 0;
+}
+.editor-styles-wrapper .bnr-box p {
+  opacity: 0;
+}
+.editor-styles-wrapper .js-ani-on .top-text__inner p:nth-child(1) {
+  -webkit-animation: example 1.1s ease-out 0.8s 1 forwards;
+          animation: example 1.1s ease-out 0.8s 1 forwards;
+}
+.editor-styles-wrapper .js-ani-on .top-text__inner p:nth-child(2) {
+  -webkit-animation: example 1.1s ease-out 1.6s 1 forwards;
+          animation: example 1.1s ease-out 1.6s 1 forwards;
+}
+.editor-styles-wrapper .js-ani-on .top-text__inner p:nth-child(3) {
+  -webkit-animation: example 1.1s ease-out 2.4s 1 forwards;
+          animation: example 1.1s ease-out 2.4s 1 forwards;
+}
+.editor-styles-wrapper .js-ani-on .top-text__inner p:nth-child(4) {
+  -webkit-animation: example 1.1s ease-out 3.2s 1 forwards;
+          animation: example 1.1s ease-out 3.2s 1 forwards;
+}
+.editor-styles-wrapper .js-ani-on .top-text__inner p:nth-child(5) {
+  -webkit-animation: example 1.1s ease-out 4s 1 forwards;
+          animation: example 1.1s ease-out 4s 1 forwards;
+}
+.editor-styles-wrapper .js-ani-on .top-text__inner p:nth-child(6) {
+  -webkit-animation: example 1.1s ease-out 4.8s 1 forwards;
+          animation: example 1.1s ease-out 4.8s 1 forwards;
+}
+.editor-styles-wrapper .bnr-box.js-ani-on p:nth-child(1) {
+  -webkit-animation: example 0.5s ease-out 0.5s 1 forwards;
+          animation: example 0.5s ease-out 0.5s 1 forwards;
+}
+.editor-styles-wrapper .bnr-box.js-ani-on p:nth-child(2) {
+  -webkit-animation: example 0.5s ease-out 1s 1 forwards;
+          animation: example 0.5s ease-out 1s 1 forwards;
+}
+.editor-styles-wrapper .bnr-box.js-ani-on p:nth-child(3) {
+  -webkit-animation: example 0.5s ease-out 1.5s 1 forwards;
+          animation: example 0.5s ease-out 1.5s 1 forwards;
+}
+.editor-styles-wrapper .bnr-box.js-ani-on p:nth-child(4) {
+  -webkit-animation: example 0.5s ease-out 2s 1 forwards;
+          animation: example 0.5s ease-out 2s 1 forwards;
+}
+.editor-styles-wrapper .bnr-box.js-ani-on p:nth-child(5) {
+  -webkit-animation: example 0.5s ease-out 2.5s 1 forwards;
+          animation: example 0.5s ease-out 2.5s 1 forwards;
+}
+.editor-styles-wrapper .bnr-box.js-ani-on p:nth-child(6) {
+  -webkit-animation: example 0.5s ease-out 3s 1 forwards;
+          animation: example 0.5s ease-out 3s 1 forwards;
+}
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes passingBar {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  51% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@keyframes passingBar {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  51% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@-webkit-keyframes passingBarIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes passingBarIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.editor-styles-wrapper .passingBarIn {
+  opacity: 0;
+}
+.editor-styles-wrapper .passingBar.js-ani-on {
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.editor-styles-wrapper .passingBar.js-ani-on::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-animation: passingBar 1s ease 0s 1 normal forwards;
+          animation: passingBar 1s ease 0s 1 normal forwards;
+  /* 任意の値 */
+  background: #e94cbf;
+}
+.editor-styles-wrapper .passingBar.js-ani-on .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 0.5s 1 normal forwards;
+          animation: passingBarIn 0s ease 0.5s 1 normal forwards;
+}
+.editor-styles-wrapper .passingBar.js-ani-on.delay1::before {
+  -webkit-animation: passingBar 1s ease 0.2s 1 normal forwards;
+          animation: passingBar 1s ease 0.2s 1 normal forwards;
+}
+.editor-styles-wrapper .passingBar.js-ani-on.delay1 .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 0.7s 1 normal forwards;
+          animation: passingBarIn 0s ease 0.7s 1 normal forwards;
+}
+.editor-styles-wrapper .passingBar.js-ani-on.delay2::before {
+  -webkit-animation: passingBar 1s ease 0.4s 1 normal forwards;
+          animation: passingBar 1s ease 0.4s 1 normal forwards;
+}
+.editor-styles-wrapper .passingBar.js-ani-on.delay2 .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 0.9s 1 normal forwards;
+          animation: passingBarIn 0s ease 0.9s 1 normal forwards;
+}
+.editor-styles-wrapper .passingBar.js-ani-on.delay3::before {
+  -webkit-animation: passingBar 1s ease 0.6s 1 normal forwards;
+          animation: passingBar 1s ease 0.6s 1 normal forwards;
+}
+.editor-styles-wrapper .passingBar.js-ani-on.delay3 .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 1.2s 1 normal forwards;
+          animation: passingBarIn 0s ease 1.2s 1 normal forwards;
+}
+.editor-styles-wrapper .js-ani.fadeIn, .editor-styles-wrapper .js-ani.fadeInDown, .editor-styles-wrapper .js-ani.fadeInDownBig, .editor-styles-wrapper .js-ani.fadeInLeft, .editor-styles-wrapper .js-ani.fadeInLeftBig, .editor-styles-wrapper .js-ani.fadeInRight, .editor-styles-wrapper .js-ani.fadeInRightBig, .editor-styles-wrapper .js-ani.fadeInUp, .editor-styles-wrapper .js-ani.fadeInUpBig, .editor-styles-wrapper .js-ani.fadeInTopLeft, .editor-styles-wrapper .js-ani.fadeInTopRight, .editor-styles-wrapper .js-ani.fadeInBottomLeft, .editor-styles-wrapper .js-ani.fadeInBottomRight {
+  opacity: 0;
+  -webkit-transition-duration: 0.7s, 0.3s;
+          transition-duration: 0.7s, 0.3s;
+}
+.editor-styles-wrapper .js-ani.filterBlur {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+.editor-styles-wrapper .js-ani.fadeInDown {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+.editor-styles-wrapper .js-ani.fadeInDownBig {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+.editor-styles-wrapper .js-ani.fadeInLeft {
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+.editor-styles-wrapper .js-ani.fadeInLeftBig {
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
+}
+.editor-styles-wrapper .js-ani.fadeInRight {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+.editor-styles-wrapper .js-ani.fadeInRightBig {
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+}
+.editor-styles-wrapper .js-ani.fadeInUp {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+.editor-styles-wrapper .js-ani.fadeInUpBig {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+}
+.editor-styles-wrapper .js-ani.fadeInTopLeft {
+  -webkit-transform: translate(-30px, -30px);
+          transform: translate(-30px, -30px);
+}
+.editor-styles-wrapper .js-ani.fadeInTopRight {
+  -webkit-transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
+}
+.editor-styles-wrapper .js-ani.fadeInBottomLeft {
+  -webkit-transform: translate(-30px, 30px);
+          transform: translate(-30px, 30px);
+}
+.editor-styles-wrapper .js-ani.fadeInBottomRight {
+  -webkit-transform: translate(30px, 30px);
+          transform: translate(30px, 30px);
+}
+.editor-styles-wrapper .js-ani.js-ani-on.fadeIn, .editor-styles-wrapper .js-ani.js-ani-on.fadeInDown, .editor-styles-wrapper .js-ani.js-ani-on.fadeInDownBig, .editor-styles-wrapper .js-ani.js-ani-on.fadeInLeft, .editor-styles-wrapper .js-ani.js-ani-on.fadeInLeftBig, .editor-styles-wrapper .js-ani.js-ani-on.fadeInRight, .editor-styles-wrapper .js-ani.js-ani-on.fadeInRightBig, .editor-styles-wrapper .js-ani.js-ani-on.fadeInUp, .editor-styles-wrapper .js-ani.js-ani-on.fadeInUpBig, .editor-styles-wrapper .js-ani.js-ani-on.fadeInTopLeft, .editor-styles-wrapper .js-ani.js-ani-on.fadeInTopRight, .editor-styles-wrapper .js-ani.js-ani-on.fadeInBottomLeft, .editor-styles-wrapper .js-ani.js-ani-on.fadeInBottomRight {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.editor-styles-wrapper .js-ani.js-ani-on.filterBlur {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+.editor-styles-wrapper .js-ani.scaleUpIn, .editor-styles-wrapper .js-ani.scaleUpInLeft, .editor-styles-wrapper .js-ani.scaleUpInRight, .editor-styles-wrapper .js-ani.scaleDownIn, .editor-styles-wrapper .js-ani.scaleDownInLeft, .editor-styles-wrapper .js-ani.scaleDownInRight {
+  opacity: 0;
+  -webkit-transition-duration: 0.7s, 0.3s;
+          transition-duration: 0.7s, 0.3s;
+}
+.editor-styles-wrapper .js-ani.filterBlur {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+.editor-styles-wrapper .js-ani.scaleUpIn {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+.editor-styles-wrapper .js-ani.scaleUpInLeft {
+  -webkit-transform: scale(0.85) translate(-30px, 0);
+          transform: scale(0.85) translate(-30px, 0);
+}
+.editor-styles-wrapper .js-ani.scaleUpInRight {
+  -webkit-transform: scale(0.85) translate(30px, 0);
+          transform: scale(0.85) translate(30px, 0);
+}
+.editor-styles-wrapper .js-ani.scaleDownIn {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.editor-styles-wrapper .js-ani.scaleDownInLeft {
+  -webkit-transform: scale(1.15) translate(-30px, 0);
+          transform: scale(1.15) translate(-30px, 0);
+}
+.editor-styles-wrapper .js-ani.scaleDownInRight {
+  -webkit-transform: scale(1.15) translate(30px, 0);
+          transform: scale(1.15) translate(30px, 0);
+}
+.editor-styles-wrapper .js-ani.js-ani-on.scaleUpIn, .editor-styles-wrapper .js-ani.js-ani-on.scaleUpInLeft, .editor-styles-wrapper .js-ani.js-ani-on.scaleUpInRight, .editor-styles-wrapper .js-ani.js-ani-on.scaleDownIn, .editor-styles-wrapper .js-ani.js-ani-on.scaleDownInLeft, .editor-styles-wrapper .js-ani.js-ani-on.scaleDownInRight {
+  opacity: 1;
+  -webkit-transform: scale(1) translate(0, 0);
+          transform: scale(1) translate(0, 0);
+}
+.editor-styles-wrapper .js-ani.js-ani-on.filterBlur {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+.editor-styles-wrapper .js-ani-on.delay1 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.editor-styles-wrapper .js-ani-on.delay2 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.editor-styles-wrapper .js-ani-on.delay3 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.editor-styles-wrapper .js-ani-on.delay4 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.editor-styles-wrapper .js-ani-on.delay5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.editor-styles-wrapper .js-ani-on.delay6 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.editor-styles-wrapper .js-ani-on.delay7 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.editor-styles-wrapper .js-ani-on.delay8 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+.editor-styles-wrapper .js-ani-on.delay9 {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+.editor-styles-wrapper .js-ani-on.delay10 {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.editor-styles-wrapper .js-ani-on.delay11 {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+.editor-styles-wrapper .js-ani-on.delay12 {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+@media only screen and (max-width: 768px) {
+  .editor-styles-wrapper .js-ani-on.delay1, .editor-styles-wrapper .js-ani-on.delay2, .editor-styles-wrapper .js-ani-on.delay3, .editor-styles-wrapper .js-ani-on.delay4, .editor-styles-wrapper .js-ani-on.delay4, .editor-styles-wrapper .js-ani-on.delay5, .editor-styles-wrapper .js-ani-on.delay6, .editor-styles-wrapper .js-ani-on.delay7, .editor-styles-wrapper .js-ani-on.delay8, .editor-styles-wrapper .js-ani-on.delay9, .editor-styles-wrapper .js-ani-on.delay10, .editor-styles-wrapper .js-ani-on.delay11, .editor-styles-wrapper .js-ani-on.delay12 {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
 }
 .editor-styles-wrapper .page-ttl {
   padding: 2em 15px;

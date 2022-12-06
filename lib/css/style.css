@@ -941,271 +941,6 @@ button.swiper-pagination-bullet {
 }
 
 /*!
-Version: 1.8.0
-slick.css
- */
-.slick-slider {
-  position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-track, .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slick-track:before, .slick-track:after {
-  display: table;
-  content: "";
-}
-
-.slick-track:after {
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-
-[dir=rtl] .slick-slide {
-  float: right;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
-}
-
-/*!
-Version: 1.8.0
-slick-theme.css
- */
-.slick-loading .slick-list {
-  background: #fff url(../img/parts/ajax-loader.gif) center center no-repeat;
-}
-
-@font-face {
-  font-family: "slick";
-  font-weight: 400;
-  font-style: normal;
-  src: url(../img/parts/slick.eot);
-  src: url(../img/parts/slick.eot?#iefix) format("embedded-opentype"), url(../img/parts/slick.woff) format("woff"), url(../img/parts/slick.ttf) format("truetype"), url(../img/parts/slick.svg#slick) format("svg");
-}
-.slick-prev, .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-  color: transparent;
-  outline: none;
-  background: transparent;
-}
-
-.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
-  opacity: 1;
-}
-
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-
-[dir=rtl] .slick-prev {
-  right: -25px;
-  left: auto;
-}
-
-.slick-prev:before {
-  content: "←";
-}
-
-[dir=rtl] .slick-prev:before {
-  content: "→";
-}
-
-.slick-next {
-  right: -25px;
-}
-
-[dir=rtl] .slick-next {
-  right: auto;
-  left: -25px;
-}
-
-.slick-next:before {
-  content: "→";
-}
-
-[dir=rtl] .slick-next:before {
-  content: "←";
-}
-
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-
-.slick-dots li button:hover, .slick-dots li button:focus {
-  outline: none;
-}
-
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  opacity: 1;
-}
-
-.slick-dots li button:before {
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: "•";
-  text-align: center;
-  opacity: 0.25;
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: #000;
-}
-
-/*!
 Colorbox Core Style:
 The following CSS is consistent between example themes and should not be altered.
 */
@@ -1434,6 +1169,436 @@ The following CSS is consistent between example themes and should not be altered
   margin: 20px;
 }
 
+ul.ani-list.up li {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+ul.ani-list.down li {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+ul.ani-list.left li {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+ul.ani-list.right li {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.ani-list > * {
+  -webkit-transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.8s;
+  transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.8s;
+  opacity: 0;
+}
+.ani-list.js-ani-on > * {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+.ani-list.js-ani-on > *:nth-child(1) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.ani-list.js-ani-on > *:nth-child(2) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.ani-list.js-ani-on > *:nth-child(3) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+.ani-list.js-ani-on > *:nth-child(4) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+.ani-list.js-ani-on > *:nth-child(5) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+.ani-list.js-ani-on > *:nth-child(6) {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+.ani-list.js-ani-on > *:nth-child(7) {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+.ani-list.js-ani-on > *:nth-child(8) {
+  -webkit-transition-delay: 2.4s;
+          transition-delay: 2.4s;
+}
+.ani-list.js-ani-on > *:nth-child(9) {
+  -webkit-transition-delay: 2.7s;
+          transition-delay: 2.7s;
+}
+.ani-list.js-ani-on > *:nth-child(10) {
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+}
+
+.top-text__inner p {
+  opacity: 0;
+}
+
+.bnr-box p {
+  opacity: 0;
+}
+
+.js-ani-on .top-text__inner p:nth-child(1) {
+  -webkit-animation: example 1.1s ease-out 0.8s 1 forwards;
+          animation: example 1.1s ease-out 0.8s 1 forwards;
+}
+
+.js-ani-on .top-text__inner p:nth-child(2) {
+  -webkit-animation: example 1.1s ease-out 1.6s 1 forwards;
+          animation: example 1.1s ease-out 1.6s 1 forwards;
+}
+
+.js-ani-on .top-text__inner p:nth-child(3) {
+  -webkit-animation: example 1.1s ease-out 2.4s 1 forwards;
+          animation: example 1.1s ease-out 2.4s 1 forwards;
+}
+
+.js-ani-on .top-text__inner p:nth-child(4) {
+  -webkit-animation: example 1.1s ease-out 3.2s 1 forwards;
+          animation: example 1.1s ease-out 3.2s 1 forwards;
+}
+
+.js-ani-on .top-text__inner p:nth-child(5) {
+  -webkit-animation: example 1.1s ease-out 4s 1 forwards;
+          animation: example 1.1s ease-out 4s 1 forwards;
+}
+
+.js-ani-on .top-text__inner p:nth-child(6) {
+  -webkit-animation: example 1.1s ease-out 4.8s 1 forwards;
+          animation: example 1.1s ease-out 4.8s 1 forwards;
+}
+
+.bnr-box.js-ani-on p:nth-child(1) {
+  -webkit-animation: example 0.5s ease-out 0.5s 1 forwards;
+          animation: example 0.5s ease-out 0.5s 1 forwards;
+}
+
+.bnr-box.js-ani-on p:nth-child(2) {
+  -webkit-animation: example 0.5s ease-out 1s 1 forwards;
+          animation: example 0.5s ease-out 1s 1 forwards;
+}
+
+.bnr-box.js-ani-on p:nth-child(3) {
+  -webkit-animation: example 0.5s ease-out 1.5s 1 forwards;
+          animation: example 0.5s ease-out 1.5s 1 forwards;
+}
+
+.bnr-box.js-ani-on p:nth-child(4) {
+  -webkit-animation: example 0.5s ease-out 2s 1 forwards;
+          animation: example 0.5s ease-out 2s 1 forwards;
+}
+
+.bnr-box.js-ani-on p:nth-child(5) {
+  -webkit-animation: example 0.5s ease-out 2.5s 1 forwards;
+          animation: example 0.5s ease-out 2.5s 1 forwards;
+}
+
+.bnr-box.js-ani-on p:nth-child(6) {
+  -webkit-animation: example 0.5s ease-out 3s 1 forwards;
+          animation: example 0.5s ease-out 3s 1 forwards;
+}
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes passingBar {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  51% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@keyframes passingBar {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  51% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@-webkit-keyframes passingBarIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes passingBarIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.passingBarIn {
+  opacity: 0;
+}
+
+.passingBar.js-ani-on {
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.passingBar.js-ani-on::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-animation: passingBar 1s ease 0s 1 normal forwards;
+          animation: passingBar 1s ease 0s 1 normal forwards;
+  /* 任意の値 */
+  background: #e94cbf;
+}
+.passingBar.js-ani-on .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 0.5s 1 normal forwards;
+          animation: passingBarIn 0s ease 0.5s 1 normal forwards;
+}
+.passingBar.js-ani-on.delay1::before {
+  -webkit-animation: passingBar 1s ease 0.2s 1 normal forwards;
+          animation: passingBar 1s ease 0.2s 1 normal forwards;
+}
+.passingBar.js-ani-on.delay1 .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 0.7s 1 normal forwards;
+          animation: passingBarIn 0s ease 0.7s 1 normal forwards;
+}
+.passingBar.js-ani-on.delay2::before {
+  -webkit-animation: passingBar 1s ease 0.4s 1 normal forwards;
+          animation: passingBar 1s ease 0.4s 1 normal forwards;
+}
+.passingBar.js-ani-on.delay2 .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 0.9s 1 normal forwards;
+          animation: passingBarIn 0s ease 0.9s 1 normal forwards;
+}
+.passingBar.js-ani-on.delay3::before {
+  -webkit-animation: passingBar 1s ease 0.6s 1 normal forwards;
+          animation: passingBar 1s ease 0.6s 1 normal forwards;
+}
+.passingBar.js-ani-on.delay3 .passingBarIn {
+  -webkit-animation: passingBarIn 0s ease 1.2s 1 normal forwards;
+          animation: passingBarIn 0s ease 1.2s 1 normal forwards;
+}
+
+.js-ani.fadeIn, .js-ani.fadeInDown, .js-ani.fadeInDownBig, .js-ani.fadeInLeft, .js-ani.fadeInLeftBig, .js-ani.fadeInRight, .js-ani.fadeInRightBig, .js-ani.fadeInUp, .js-ani.fadeInUpBig, .js-ani.fadeInTopLeft, .js-ani.fadeInTopRight, .js-ani.fadeInBottomLeft, .js-ani.fadeInBottomRight {
+  opacity: 0;
+  -webkit-transition-duration: 0.7s, 0.3s;
+          transition-duration: 0.7s, 0.3s;
+}
+.js-ani.filterBlur {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+.js-ani.fadeInDown {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+.js-ani.fadeInDownBig {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+.js-ani.fadeInLeft {
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+.js-ani.fadeInLeftBig {
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
+}
+.js-ani.fadeInRight {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+.js-ani.fadeInRightBig {
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+}
+.js-ani.fadeInUp {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+.js-ani.fadeInUpBig {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+}
+.js-ani.fadeInTopLeft {
+  -webkit-transform: translate(-30px, -30px);
+          transform: translate(-30px, -30px);
+}
+.js-ani.fadeInTopRight {
+  -webkit-transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
+}
+.js-ani.fadeInBottomLeft {
+  -webkit-transform: translate(-30px, 30px);
+          transform: translate(-30px, 30px);
+}
+.js-ani.fadeInBottomRight {
+  -webkit-transform: translate(30px, 30px);
+          transform: translate(30px, 30px);
+}
+.js-ani.js-ani-on.fadeIn, .js-ani.js-ani-on.fadeInDown, .js-ani.js-ani-on.fadeInDownBig, .js-ani.js-ani-on.fadeInLeft, .js-ani.js-ani-on.fadeInLeftBig, .js-ani.js-ani-on.fadeInRight, .js-ani.js-ani-on.fadeInRightBig, .js-ani.js-ani-on.fadeInUp, .js-ani.js-ani-on.fadeInUpBig, .js-ani.js-ani-on.fadeInTopLeft, .js-ani.js-ani-on.fadeInTopRight, .js-ani.js-ani-on.fadeInBottomLeft, .js-ani.js-ani-on.fadeInBottomRight {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.js-ani.js-ani-on.filterBlur {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.js-ani.scaleUpIn, .js-ani.scaleUpInLeft, .js-ani.scaleUpInRight, .js-ani.scaleDownIn, .js-ani.scaleDownInLeft, .js-ani.scaleDownInRight {
+  opacity: 0;
+  -webkit-transition-duration: 0.7s, 0.3s;
+          transition-duration: 0.7s, 0.3s;
+}
+.js-ani.filterBlur {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+.js-ani.scaleUpIn {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+.js-ani.scaleUpInLeft {
+  -webkit-transform: scale(0.85) translate(-30px, 0);
+          transform: scale(0.85) translate(-30px, 0);
+}
+.js-ani.scaleUpInRight {
+  -webkit-transform: scale(0.85) translate(30px, 0);
+          transform: scale(0.85) translate(30px, 0);
+}
+.js-ani.scaleDownIn {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.js-ani.scaleDownInLeft {
+  -webkit-transform: scale(1.15) translate(-30px, 0);
+          transform: scale(1.15) translate(-30px, 0);
+}
+.js-ani.scaleDownInRight {
+  -webkit-transform: scale(1.15) translate(30px, 0);
+          transform: scale(1.15) translate(30px, 0);
+}
+.js-ani.js-ani-on.scaleUpIn, .js-ani.js-ani-on.scaleUpInLeft, .js-ani.js-ani-on.scaleUpInRight, .js-ani.js-ani-on.scaleDownIn, .js-ani.js-ani-on.scaleDownInLeft, .js-ani.js-ani-on.scaleDownInRight {
+  opacity: 1;
+  -webkit-transform: scale(1) translate(0, 0);
+          transform: scale(1) translate(0, 0);
+}
+.js-ani.js-ani-on.filterBlur {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.js-ani-on.delay1 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.js-ani-on.delay2 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.js-ani-on.delay3 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.js-ani-on.delay4 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.js-ani-on.delay5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.js-ani-on.delay6 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.js-ani-on.delay7 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.js-ani-on.delay8 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+.js-ani-on.delay9 {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+.js-ani-on.delay10 {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.js-ani-on.delay11 {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+.js-ani-on.delay12 {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+@media only screen and (max-width: 768px) {
+  .js-ani-on.delay1, .js-ani-on.delay2, .js-ani-on.delay3, .js-ani-on.delay4, .js-ani-on.delay4, .js-ani-on.delay5, .js-ani-on.delay6, .js-ani-on.delay7, .js-ani-on.delay8, .js-ani-on.delay9, .js-ani-on.delay10, .js-ani-on.delay11, .js-ani-on.delay12 {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+}
+
 /* ===================================================================
  style info : リセット及びフォントサイズ
 =================================================================== */
@@ -1637,7 +1802,7 @@ body.home .header {
   background-image: url("./../img/icon_en.png");
   background-position: 8px center;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .bogo-language-switcher {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3798,25 +3963,6 @@ h4:not(.no-style):first-child {
           animation: passingBarIn 0s ease 1.2s 1 normal forwards;
 }
 
-@-webkit-keyframes passingBar {
-  0% {
-    left: 0;
-    width: 0;
-  }
-  50% {
-    left: 0;
-    width: 100%;
-  }
-  51% {
-    left: 0;
-    width: 100%;
-  }
-  100% {
-    left: 100%;
-    width: 0;
-  }
-}
-
 @keyframes passingBar {
   0% {
     left: 0;
@@ -3833,17 +3979,6 @@ h4:not(.no-style):first-child {
   100% {
     left: 100%;
     width: 0;
-  }
-}
-@-webkit-keyframes passingBarIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes passingBarIn {
