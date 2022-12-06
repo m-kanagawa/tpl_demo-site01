@@ -2643,6 +2643,119 @@ main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child 
   background-color: #fff8f2;
 }
 
+.mk-num {
+  counter-reset: number 0;
+}
+.mk-num .container {
+  position: relative;
+}
+.mk-num .container::before {
+  counter-increment: number 1;
+  content: "体験" counter(number, decimal-leading-zero);
+  display: block;
+  position: absolute;
+  top: -24px;
+  right: 20px;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-align: center;
+  letter-spacing: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e94cbf), color-stop(72%, #c40d93), to(#c40d93));
+  background: linear-gradient(180deg, #e94cbf 0%, #c40d93 72%, #c40d93 100%);
+  background: -webkit-linear-gradient(-90deg, #e94cbf 0%, #c40d93 72%, #c40d93 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mk-num .container:nth-child(2n)::before {
+  right: auto;
+  left: 20px;
+}
+@media (min-width: 768px) {
+  .mk-num .container::before {
+    top: -28px;
+    font-size: 3rem;
+  }
+}
+.mk-num .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+  background-color: rgba(233, 76, 191, 0.1);
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .mk-num .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 36px;
+  }
+}
+.mk-num .container .col {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+.mk-num .container .col figure {
+  margin-bottom: 20px;
+}
+.mk-num .container .col figure img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.mk-num .container .col:nth-child(2) {
+  width: 100%;
+  margin-left: auto;
+}
+.mk-num .container .col:nth-child(2) .custom_txt {
+  margin-bottom: 0;
+}
+.mk-num .container .col:nth-child(2) .custom_txt p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .mk-num .container .col {
+    width: 34%;
+  }
+  .mk-num .container .col:nth-child(2) {
+    width: 60%;
+  }
+  .mk-num .container .col figure {
+    margin-bottom: 0;
+  }
+}
+.mk-num .container:nth-child(2n) .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 768px) {
+  .mk-num .container:nth-child(2n) .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+.mk-num .container:nth-child(2n) .col:nth-child(2) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 /*  サイトマップ
 ----------------------------------------------------*/
 .body-sitemap .sec_sitemap ul {
