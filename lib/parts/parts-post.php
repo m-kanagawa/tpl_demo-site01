@@ -11,7 +11,7 @@
 		</ul>
 
 		<div class="news-box__panel">
-			
+
 			<div class="panel is-show">
 				<dl>
 					<?php
